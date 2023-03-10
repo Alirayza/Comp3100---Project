@@ -37,7 +37,7 @@ public class TCPClient{
                         dout.close();
                         s.close();
                 }
-                catch(Excption e){System.out.println(e);}
+                catch(Exception e){System.out.println(e);}
                 try {TimeUnit.SECONDS.sleep(1);} catch (InterruptedException e){System.out.println(e);}
 
 
