@@ -12,7 +12,7 @@ public class TCPClient{
         public static void main(String[] args){
             while(true){
                 try{
-                    InetAddress aHost = InetAdress.getByName(args[0]);
+                    InetAddress aHost = InetAddress.getByName(args[0]);
                     int aPort = Integer.parseInt(args[1]);
                     Socket s = new Socket(aHost,aPort);
                     DataOutputStream dout = new DataOutputStream(s.getOutputStream());
