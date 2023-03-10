@@ -1,0 +1,503 @@
+2023.03.10 12:40:16 INFO  Started: Metals version 0.11.11 in workspace '/Users/alijee/Comp3100---Project' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/alijee/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.10 12:40:17 INFO  time: initialize in 1s
+2023.03.10 12:40:20 WARN  Build server is not auto-connectable.
+2023.03.10 12:40:20 WARN  no build tool detected in workspace '/Users/alijee/Comp3100---Project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Mar. 10, 2023 12:40:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Mar. 10, 2023 12:40:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2023.03.10 12:40:20 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+Mar. 10, 2023 12:40:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5
+Mar. 10, 2023 12:40:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 40 out of bounds for char[39]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 40 out of bounds for char[39]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 40 out of bounds for char[39]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getCurrentTokenSource(PublicScanner.java:496)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.swallowUntilSemicolon$1(JavaFoldingRangeExtractor.scala:52)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:76)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:25 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 45 out of bounds for char[44]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 45 out of bounds for char[44]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 45 out of bounds for char[44]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getCurrentTokenSource(PublicScanner.java:496)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.swallowUntilSemicolon$1(JavaFoldingRangeExtractor.scala:52)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:76)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:27 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 52 out of bounds for char[51]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 52 out of bounds for char[51]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 52 out of bounds for char[51]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getCurrentTokenSource(PublicScanner.java:496)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.swallowUntilSemicolon$1(JavaFoldingRangeExtractor.scala:52)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:76)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 53 out of bounds for char[52]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 53 out of bounds for char[52]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 53 out of bounds for char[52]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getRawTokenSource(PublicScanner.java:597)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:73)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 54 out of bounds for char[53]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 54 out of bounds for char[53]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 54 out of bounds for char[53]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getRawTokenSource(PublicScanner.java:597)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:83)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 60 out of bounds for char[59]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 60 out of bounds for char[59]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 60 out of bounds for char[59]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getCurrentTokenSource(PublicScanner.java:496)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.swallowUntilSemicolon$1(JavaFoldingRangeExtractor.scala:52)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:76)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:33 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 61 out of bounds for char[60]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 61 out of bounds for char[60]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 61 out of bounds for char[60]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getCurrentTokenSource(PublicScanner.java:496)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.swallowUntilSemicolon$1(JavaFoldingRangeExtractor.scala:52)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:76)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:43 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 157 out of bounds for char[156]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 157 out of bounds for char[156]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 157 out of bounds for char[156]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getRawTokenSource(PublicScanner.java:597)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:73)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+Mar. 10, 2023 12:40:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 159 out of bounds for char[158]
+java.util.concurrent.CompletionException: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 159 out of bounds for char[158]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: arraycopy: last source index 159 out of bounds for char[158]
+	at java.base/java.lang.System.arraycopy(Native Method)
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getRawTokenSource(PublicScanner.java:597)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gatherImportLines$1(JavaFoldingRangeExtractor.scala:83)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:123)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.03.10 12:40:54 WARN  Cannot tokenize Java file file:///Users/alijee/Comp3100---Project/TCPClient.java
+org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1564)
+	at scala.meta.internal.parsing.JavaTokens$.loop$1(JavaTokens.scala:71)
+	at scala.meta.internal.parsing.JavaTokens$.$anonfun$tokenize$1(JavaTokens.scala:75)
+	at scala.util.Try$.apply(Try.scala:210)
+	at scala.meta.internal.parsing.JavaTokens$.tokenize(JavaTokens.scala:35)
+	at scala.meta.internal.parsing.TokenEditDistance$.apply(TokenEditDistance.scala:370)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:226)
+	at scala.meta.internal.metals.Diagnostics.publishDiagnostics(Diagnostics.scala:188)
+	at scala.meta.internal.metals.Diagnostics.didChange(Diagnostics.scala:136)
+	at scala.meta.internal.metals.MetalsLspService.didChange(MetalsLspService.scala:1248)
+	at scala.meta.metals.lsp.DelegatingScalaService.didChange(DelegatingScalaService.scala:50)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(null)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+
+Mar. 10, 2023 12:40:54 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+java.util.concurrent.CompletionException: org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: org.eclipse.jdt.core.compiler.InvalidInputException: Invalid_Char_In_String
+	at org.eclipse.jdt.internal.core.util.PublicScanner.getNextToken(PublicScanner.java:1564)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.next$1(JavaFoldingRangeExtractor.scala:100)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.gather$1(JavaFoldingRangeExtractor.scala:147)
+	at scala.meta.internal.parsing.JavaFoldingRangeExtractor.extract(JavaFoldingRangeExtractor.scala:155)
+	at scala.meta.internal.parsing.FoldingRangeProvider.$anonfun$getRangedForJava$2(FoldingRangeProvider.scala:48)
+	at scala.Option$WithFilter.map(Option.scala:242)
+	at scala.meta.internal.parsing.FoldingRangeProvider.getRangedForJava(FoldingRangeProvider.scala:43)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$foldingRange$3(MetalsLspService.scala:1776)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2023.03.10 12:51:36 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:51:40 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:51:41 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:51:41 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPServer.java. Output:
+/Users/alijee/Comp3100---Project/TCPServer.java:7: error: repeated modifier
+    public public static void main(String[]args) throws IOException {
+           ^
+/Users/alijee/Comp3100---Project/TCPServer.java:14: error: ';' expected
+                Socket s == ss.accept(); //establishes connection
+                        ^
+2 errors
+2023.03.10 12:57:29 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:57:36 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:58:10 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:58:21 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:58:24 INFO  Shutting down server
+2023.03.10 12:58:24 INFO  shutting down Metals
+2023.03.10 12:58:24 INFO  Exiting server
+2023.03.10 12:58:52 INFO  Started: Metals version 0.11.11 in workspace '/Users/alijee/Comp3100---Project' for client Visual Studio Code 1.75.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/alijee/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.10 12:58:54 INFO  time: initialize in 1.19s
+2023.03.10 12:58:57 WARN  Build server is not auto-connectable.
+2023.03.10 12:58:57 WARN  no build tool detected in workspace '/Users/alijee/Comp3100---Project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.10 12:58:57 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 12:58:57 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+Mar. 10, 2023 12:58:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+2023.03.10 12:58:59 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPServer.java. Output:
+/Users/alijee/Comp3100---Project/TCPServer.java:7: error: repeated modifier
+    public public static void main(String[]args) throws IOException {
+           ^
+/Users/alijee/Comp3100---Project/TCPServer.java:14: error: ';' expected
+                Socket s == ss.accept(); //establishes connection
+                        ^
+2 errors
+2023.03.10 12:59:25 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 12:59:26 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:7: error: '{' expected
+public class TCPClient (
+                      ^
+/Users/alijee/Comp3100---Project/TCPClient.java:10: error: reached end of file while parsing
+ }
+  ^
+2 errors
+2023.03.10 12:59:38 INFO  Shutting down server
+2023.03.10 12:59:38 INFO  shutting down Metals
+2023.03.10 12:59:38 INFO  Exiting server
+2023.03.10 13:01:05 INFO  Started: Metals version 0.11.11 in workspace '/Users/alijee/Comp3100---Project' for client Visual Studio Code 1.76.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/alijee/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.10 13:01:07 INFO  time: initialize in 1.07s
+2023.03.10 13:01:10 WARN  Build server is not auto-connectable.
+2023.03.10 13:01:10 WARN  no build tool detected in workspace '/Users/alijee/Comp3100---Project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.10 13:01:10 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 13:01:11 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPServer.java. Output:
+/Users/alijee/Comp3100---Project/TCPServer.java:7: error: repeated modifier
+    public public static void main(String[]args) throws IOException {
+           ^
+/Users/alijee/Comp3100---Project/TCPServer.java:14: error: ';' expected
+                Socket s == ss.accept(); //establishes connection
+                        ^
+2 errors
+2023.03.10 13:02:17 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 13:02:19 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:7: error: '{' expected
+public class TCPClient (
+                      ^
+/Users/alijee/Comp3100---Project/TCPClient.java:10: error: reached end of file while parsing
+ }
+  ^
+2 errors
+2023.03.10 13:02:49 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 13:02:49 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 13:02:50 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: '(' expected
+        public static void main) String[] args){
+                               ^
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: ';' expected
+        public static void main) String[] args){
+                                              ^
+/Users/alijee/Comp3100---Project/TCPClient.java:47: error: class, interface, or enum expected
+}
+^
+3 errors
+2023.03.10 13:03:05 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 13:03:05 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:36:57 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:37:01 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:37:03 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+Mar. 10, 2023 3:40:42 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 80
+2023.03.10 15:40:47 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:40:49 INFO  time: code lens generation in 1.69s
+2023.03.10 15:41:45 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:42:03 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:42:04 INFO  Shutting down server
+2023.03.10 15:42:04 INFO  shutting down Metals
+2023.03.10 15:42:04 INFO  Exiting server
+2023.03.10 15:42:32 INFO  Started: Metals version 0.11.11 in workspace '/Users/alijee/Comp3100---Project' for client Visual Studio Code 1.76.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/alijee/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.10 15:42:33 INFO  time: initialize in 1.15s
+2023.03.10 15:42:36 WARN  Build server is not auto-connectable.
+2023.03.10 15:42:36 WARN  no build tool detected in workspace '/Users/alijee/Comp3100---Project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.10 15:42:36 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:42:38 INFO  time: code lens generation in 1.71s
+2023.03.10 15:44:16 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:44:17 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: '(' expected
+        public static void main) String[] args){
+                               ^
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: ';' expected
+        public static void main) String[] args){
+                                              ^
+/Users/alijee/Comp3100---Project/TCPClient.java:47: error: class, interface, or enum expected
+}
+^
+3 errors
+2023.03.10 15:50:54 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:55:27 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:56:20 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:56:21 INFO  Shutting down server
+2023.03.10 15:56:21 INFO  shutting down Metals
+2023.03.10 15:56:21 INFO  Exiting server
+2023.03.10 15:59:50 INFO  Started: Metals version 0.11.11 in workspace '/Users/alijee/Comp3100---Project' for client Visual Studio Code 1.76.1.
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+SLF4J: Ignoring binding found at [jar:file:/Users/alijee/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/outr/scribe-slf4j_2.13/3.11.0/scribe-slf4j_2.13-3.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2023.03.10 15:59:51 INFO  time: initialize in 1.16s
+2023.03.10 15:59:55 WARN  Build server is not auto-connectable.
+2023.03.10 15:59:55 WARN  no build tool detected in workspace '/Users/alijee/Comp3100---Project'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2023.03.10 15:59:55 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 15:59:55 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 15:59:58 INFO  time: code lens generation in 3.11s
+2023.03.10 16:00:17 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPServer.java
+2023.03.10 16:05:25 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 16:05:27 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: '(' expected
+        public static void main) String[] args){
+                               ^
+/Users/alijee/Comp3100---Project/TCPClient.java:12: error: ';' expected
+        public static void main) String[] args){
+                                              ^
+/Users/alijee/Comp3100---Project/TCPClient.java:47: error: class, interface, or enum expected
+}
+^
+3 errors
+2023.03.10 16:05:27 INFO  time: code lens generation in 1.82s
+2023.03.10 16:05:27 INFO  time: code lens generation in 1.16s
+2023.03.10 16:05:34 WARN  no build target for: /Users/alijee/Comp3100---Project/TCPClient.java
+2023.03.10 16:05:35 WARN  Running javac-semanticdb failed for file:///Users/alijee/Comp3100---Project/TCPClient.java. Output:
+/Users/alijee/Comp3100---Project/TCPClient.java:47: error: class, interface, or enum expected
+}
+^
+1 error
+Mar. 10, 2023 4:06:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
