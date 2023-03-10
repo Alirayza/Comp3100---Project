@@ -1,13 +1,12 @@
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.InetAddress;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
+import java.io.*;
 import java.util.concurrent.TimeUnit;
 
 
 public class TCPServer {
-    public static void main(String[]args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
         int aPort = Integer.parseInt(args[0]);
         System.out.println("Port Number: " + aPort);
