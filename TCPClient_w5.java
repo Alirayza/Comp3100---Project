@@ -47,10 +47,11 @@ static void sentText(String msg) throws IOException {
                    
 
                     System.out.println("Target IP: " + s.getInetAddress() + "Target Port: "+ s.getPort());
-                    System.out.println("local IP: " + s.getLocalAddress() + "Local Port: "+ s.getLocalPort());
+                    System.out.println("local IP: " + s.getLocalAddress() + "Local Port: _"+ s.getLocalPort());
                     //try {TimeUnit.SECONDS.sleep(10);} catch (InterruptedException e){System.out.println(e);}
                     str = in.readLine();
-                    String text_string = "";
+                    String text_string = new String(str);
+                    System.out.println(text_string);
 
         sentText("HELO");
 
@@ -87,6 +88,7 @@ static void sentText(String msg) throws IOException {
         dout.write(("GETS All\n").getBytes());
         
         
+        int nRecs = Integer.parseInt(jobInfo[1]);
 
         dout.write(("OK\n").getBytes());
         dout.flush();
@@ -94,16 +96,19 @@ static void sentText(String msg) throws IOException {
         //variables to store largest server core and largetst server DATA
         int j = 0;
         String[] large = new String[10];
-        
-        for(int i = 0; i < jobID; i++) {
+        //int nCores = 0;
+        String sType = "";
+        String[] arrSpecs;
+
+        for(int i = 0; i < nRecs; i++) {
             readText();
             
-            String[] arr = str.split(" ", 9);
-            int coreNum = Integer.parseInt(String.valueOf(arr[4]));
+            arrSpecs = str.split(" ", 9);
+            int coreNum = Integer.parseInt(String.valueOf(arrSpecs[4]));
             
             if (j < coreNum) {
                 j = coreNum;
-                large = arr;
+                large = arrSpecs;
             } 
         }	
         
@@ -113,15 +118,21 @@ static void sentText(String msg) throws IOException {
         //dout.flush();
         
         sentText("OK");
-        
 
 
+
+        String[] jobArr = text_string.split(" ");
+        System.out.println(text_string);
+        if(jobArr[0].equals("JOBN")){
+            String info2 = "SCHD " + jobArr[2] + " " + sType + " 0";
+            sentText(info2);
+            readText();
+        }
 
 
 
 
         sentText("QUIT");
-
         readText();
       
 
