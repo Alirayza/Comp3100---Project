@@ -77,9 +77,8 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
                     
                     sendText("REDY");
                     recentMessage = readText();
-                    if(recentMessage.equals("NONE")){ //after receiving message from the server after REDY, need to check again that it is not sending NONE
-                        break;
-                    }
+                    if(!recentMessage.equals("NONE")){ //after receiving message from the server after REDY, need to check again that it is not sending NONE
+                        
                    
                     String [] jobList = recentMessage.split(" "); //recording the job info
                     
@@ -130,7 +129,7 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
                     SCHDcommand(jobList[0], jobID, serverType, jobID%serverTypeNumber);
                     
 
-                }
+                }}
         sendText("QUIT");
         readText();
         in.close();
