@@ -75,7 +75,7 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
         String recentMessage2 = "";
         String [] jobList = null;
                 while (!recentMessage.equals("NONE")){ //checking that last message from the server is not NONE
-                    boolean isFirst = true;
+                    boolean First_One = true;
                     sendText("REDY");
                     recentMessage2 = readText();
                      //after receiving message from the server after REDY, need to check again that it is not sending NONE
@@ -99,11 +99,11 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
                         String[] CounterArray=null;
                         recentMessage = readText();
                         CounterArray = recentMessage.split(" ");
-                        if(isFirst){
+                        if(First_One){
                             type = CounterArray[0];
                             serverID = Integer.parseInt(CounterArray[1]);
                         }
-                        isFirst = false;
+                        First_One = false;
                     }
 
                     sendText("OK");
