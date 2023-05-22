@@ -1,11 +1,3 @@
-
-/* Reference for code: 
- * 
- * Stage 1: Pseudo code for Largest Round Robin (LRR) https://content.ilearn.mq.edu.au/0b/1d/0b1dfdc5d985202002e9de6cbee2c743d3e1be3c?response-content-disposition=inline%3Bfilename%3D%22COMP3100_2023___Stage1_Pseudo_code.pdf%22&response-content-type=application%2Fpdf&Expires=1680293040&Signature=NeRuvp7efsftZEnroXEQGGgukvDZCdNiEty0RtfHblXH2JnPaq81E3Ou3BIaauKa0hH5sbzyrj4QnZDx716ZljGYF96dhs64zhjAZXGLdtESKBBqKaNzWlzyB5a7-eL8IacfgC4sYUwJJWd0S-DZDdbIIixz4zD282dBhqk79Mva7xJCHyyRzEL6CmbLIAWXpPXSOVXKLwwLttyPN-mm6U3JcU-ywuZyXfAFuq3ufMGieINvQGZN-Ca-KtI-lISHSjADCL7XTZW3SY-WKYXKdnCQFCKyzhgzGqKPWtKFJw~j7UjzXqVkA1IP7EzYOIAcAACMhDE~KPZ8O-mCfxcHEA__&Key-Pair-Id=APKAJAEFMXVVB5Z7N4TA
- * Yuzhe Tian - Week 6 Practical for LRR Protocol
- * https://stackoverflow.com/questions/3982550/creating-an-arraylist-of-objects
- * 
- */
 import java.net.*;
 import java.io.*;
 import java.util.ArrayList;
@@ -74,6 +66,9 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
         int serverID = 0;
         String recentMessage2 = "";
         String [] jobList = null;
+        int resourceAllocation =0;
+        int waitTime = 0;
+        int hourly_Rate = 0;
                 while (!recentMessage.equals("NONE")){ //checking that last message from the server is not NONE
                     boolean First_One = true;
                     sendText("REDY");
@@ -121,8 +116,4 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
         s.close();
                 }
             }
-                //catch(Exception e){System.out.println(e);}
-         
-              // }
-           // }
-       // }
+               
