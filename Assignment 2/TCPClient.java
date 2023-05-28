@@ -64,8 +64,6 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
             int coreNumbers = 0;//coreNumbers of the server to keep track of the iteractive changes within code
             int jobID = 0; //jobID retrieved from the jobList that needs to be assigned.
             int serverTypeNumber =1; //type number of the server
-            boolean LLRStart = true; //boolean variable to determinie whether LRR code should be executed or not
-            int flagcounter = 0; //flagcounter to determine whether LRR protocol was executed successfully or not.
             int memoryNum = 0;
             int diskNum = 0;
             String recentMessage =" "; //to record recent message from the server.
@@ -74,69 +72,75 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
             
    
         recentMessage = handshakeProtocol(); //returns the recent from server after Handshake protocol
-       
+        sendText("REDY");
+        recentMessage = readText();
                 while (!recentMessage.equals("NONE")){ //checking that last message from the server is not NONE
+               
                     
-                    sendText("REDY");
-                    recentMessage = readText();
-                    if(!recentMessage.equals("NONE")){ //after receiving message from the server after REDY, need to check again that it is not sending NONE
+                   
                         
                    
                     String [] jobList = recentMessage.split(" "); //recording the job info
-                    coreNumbers = Integer.parseInt(String.valueOf(jobList[4]));
-		            memoryNum = Integer.parseInt(String.valueOf(jobList[5]));
-		            diskNum = Integer.parseInt(String.valueOf(jobList[6]));
-                    jobID = Integer.parseInt(jobList[2]); //retrieving the jobID
-                     String meseg = "GETS Capable" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();
-                        sendText(meseg);
-                        recentMessage = readText();   
+                    
+                    if(jobList[0].equals("JOBN")){ //after receiving message from the server after REDY, need to check again that it is not sending NONE
+                        
+                        coreNumbers = Integer.parseInt(String.valueOf(jobList[4]));
+                        memoryNum = Integer.parseInt(String.valueOf(jobList[5]));
+                        diskNum = Integer.parseInt(String.valueOf(jobList[6]));
+                        jobID = Integer.parseInt(jobList[2]); //retrieving the jobID
+                    String meseg = "GETS Available" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();
+                    sendText(meseg);
+                    recentMessage = readText();   
                     
                    
-                    if (LLRStart){ //starting LRR Protocol 
-                        
-                
-    
+                  
 				    String[] allserverList = recentMessage.split(" "); //recording the all server info that are on the system
 				    Integer nRecs = Integer.parseInt(allserverList[1]); //number of servers/records from the retrived information
                    
+                    
+                    if (nRecs==0){
+                        sendText("OK");
+                        recentMessage = readText();
+                        meseg = "GETS Capable" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();
+                        sendText(meseg);
+                        recentMessage = readText();  
+                        allserverList = recentMessage.split(" ");
+                        nRecs = Integer.parseInt(allserverList[1]); 
+                        
+                    }
                     sendText("OK");
-
-                    for(int i = 0; i < nRecs; i++) { //looping through all servers to find the largest servers 
-                        String msg = readText();
+                    recentMessage = readText();
+               
+                    for(int i = 0; i < nRecs; i++) { 
+                        
                        
-                      
-                        String [] LRRServer = msg.split(" ");//recording all largest server information
-                        ArrayList<ServerClass> Server = new ArrayList<ServerClass>();
-                        Server.add(new ServerClass(LRRServer[0],serverTypeNumber, Integer.parseInt(LRRServer[4]))); //recording all server information into an arrayList
-                        if  (Server.get(0).serverType.equals(serverType)){ //checking if server 
-                            serverTypeNumber++; //incrementing the number of servers with same type by 1
-
-                        }
-                        if (Server.get(0).CPUCoreNo > coreNumbers) {
-                            serverTypeNumber = 1; //resetting the server number of type
-                            serverType = Server.get(0).serverType; //recording the servertype
-                            coreNumbers = Server.get(0).CPUCoreNo; //recording number of cores for the server
-                        } 
+                        recentMessage = readText();
+    
+                            String [] BestServer = recentMessage.split(" ");//recording all largest server information
+                            ArrayList<ServerClass> Server = new ArrayList<ServerClass>();
+                            Server.add(new ServerClass(BestServer[0],serverTypeNumber, coreNumbers, memoryNum, diskNum)); //recording all server information into an arrayList
+          
+                            if (Server.get(0).availableCores >= coreNumbers && Server.get(0).availableDisk >= diskNum && Server.get(0).availableMemory >= memoryNum) {
+                                serverTypeNumber = 1; //resetting the server number of type
+                                serverType = Server.get(0).serverType; //recording the servertype
+                                coreNumbers = Server.get(0).availableCores; //recording number of cores for the server
+                                diskNum = Server.get(0).availableDisk;
+                                memoryNum = Server.get(0).availableMemory;
+    
+                            } 
+                        
 
                     }
                     sendText("OK");
                     recentMessage = readText();
-                    LLRStart = false; //setting the LRR flag to false meaning that LRR Protocol is done
-                    flagcounter = 1; //setting the flagcount to 1 meaning that the LRR is successfully done indicating we can more on to SCHD
-                    
-                } else if (flagcounter == 0){ //checking if flag counter meaning the LRR protocol was  successful or not 
-                    LLRStart = true; //then set LRRflag to true meaning we have to conduct LRR protocol again.
-
-                
-       
-                }
-
                     SCHDcommand(jobList[0], jobID, serverType, jobID%serverTypeNumber);
                     
-
-                }}
+                }
+                sendText("REDY");
+                recentMessage = readText();
+            }
         sendText("QUIT");
-        readText();
+        recentMessage = readText();
         in.close();
         dout.close();
         s.close();
@@ -144,5 +148,4 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
                 catch(Exception e){System.out.println(e);}
          
                }
-           // }
-        }
+            }
