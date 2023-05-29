@@ -1,7 +1,15 @@
+
+/* Reference for code: 
+ * 
+ * 
+ * Yuzhe Tian - Week 9 & 10 Practical for FC &FF
+ * https://stackoverflow.com/questions/3982550/creating-an-arraylist-of-objects
+ * 
+ */
 import java.net.*;
 import java.io.*;
 
-class TCPClient {
+class TCPClient{
     static BufferedReader in;
     static Socket s;
     static DataOutputStream dout;
@@ -66,30 +74,30 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
 
    
         sendText("REDY");
-        recentMessage = readText(); 
+        recentMessage = readText(); //sending REDY message
 
         while(!recentMessage.equals("NONE")){
 
             String[] jobList = recentMessage.split(" ");
 
 
-            if(jobList[0].equals("JOBN")){
+            if(jobList[0].equals("JOBN")){ //checking if the server wants to schedule jobs
               
-                int coreNumbers = Integer.parseInt(String.valueOf(jobList[4]));
-                int memoryNum = Integer.parseInt(String.valueOf(jobList[5]));
-                int diskNum = Integer.parseInt(String.valueOf(jobList[6]));
+                int coreNumbers = Integer.parseInt(String.valueOf(jobList[4]));//coreNumbers retreive
+                int memoryNum = Integer.parseInt(String.valueOf(jobList[5]));//memoryNum retreive
+                int diskNum = Integer.parseInt(String.valueOf(jobList[6])); //diskNum retreive
                 int jobID = Integer.parseInt(jobList[2]); //retrieving the jobID
-                String meseg = "GETS Available" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();
+                String meseg = "GETS Available" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();//checking for available servers
                 sendText(meseg);
                 recentMessage = readText();   
-                String[] allserverList = recentMessage.split(" ");
+                String[] allserverList = recentMessage.split(" ");//storing available servers
                 int nRecs = 0;
                 
-                if (Integer.parseInt(allserverList[1]) ==0)
+                if (Integer.parseInt(allserverList[1]) ==0) //checking if from GETS Avail, there were any servers
             {
                 sendText("OK");
                 recentMessage = readText();
-                meseg = "GETS Capable" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes();
+                meseg = "GETS Capable" + " " + coreNumbers + " " + memoryNum + " " + diskNum + "\n".getBytes(); //do GETS capable then to find servers
                 sendText(meseg);
                 recentMessage = readText();   
                 
@@ -97,22 +105,22 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
     
             } 
                 allserverList = recentMessage.split(" ");
-                nRecs = Integer.parseInt(allserverList[1]);
+                nRecs = Integer.parseInt(allserverList[1]); //store GETS Cap or GETS Avail servers details
                 sendText("OK");
                 
     
                 recentMessage = readText(); 
-                String Server = recentMessage;
-                String [] selectedServerDetails = Server.split(" ");
-                serverType = selectedServerDetails[0]; 
-                coreNumbers = Integer.parseInt(jobList[4]);
+
+                String [] selectedServerDetails = recentMessage.split(" "); //detach first server from the list of collected server
+                serverType = selectedServerDetails[0]; //serverType recording
+                coreNumbers = Integer.parseInt(jobList[4]); //recording coreNumbers
                 
-                recentMessage = traverseRemain(nRecs, recentMessage);
+                recentMessage = traverseRemain(nRecs, recentMessage); //traversing through rest of the servers
     
             
                 sendText("OK");
                 recentMessage = readText(); 
-                SCHDcommand(jobList[0],jobID,serverType,Integer.parseInt((selectedServerDetails[1])));
+                SCHDcommand(jobList[0],jobID,serverType,Integer.parseInt((selectedServerDetails[1]))); //scheduing jobs to selected first servers
             }
             
             sendText("REDY");
@@ -126,6 +134,13 @@ static void SCHDcommand(String command, int jobID, String serverType, int server
         in.close();
         dout.close();
         s.close();
+    }
+
+    public static String traverseRemain(int nRecs, String RecentMessage){ //traversing rest of the servers in the list.
+        for(int i = 1; i < nRecs; i++){
+            recentMessage = readText();
+        }
+        return RecentMessage;
     }
 }
 
